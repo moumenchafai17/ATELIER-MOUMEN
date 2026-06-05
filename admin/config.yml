@@ -1,10 +1,6 @@
 backend:
   name: git-gateway
   branch: main
-  site_url: https://atelier-moumen.netlify.app
-backend:
-  name: git-gateway
-  branch: main
 
 media_folder: "images"
 public_folder: "/images"
@@ -12,10 +8,8 @@ public_folder: "/images"
 collections:
   - name: "pages"
     label: "Pages"
-    files:
-      - file: "index.html"
-        label: "Page Accueil"
-        name: "home"
-        fields:
-          - {label: "Titre Hero", name: "hero_title", widget: "string"}
-          - {label: "Sous-titre", name: "hero_subtitle", widget: "string"}
+    folder: "pages"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
